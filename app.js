@@ -10,17 +10,24 @@ const notes=require('./notes.js');
 const _=require('lodash');
 const yargs=require('yargs')
 
+const argv=yargs.argv;
 var command=process.argv[2]
 console.log(process.argv[3]);
+console.log(argv);
 
 if(command=='add'){
-   console.log('Adding new note'); 
-}else if (command=='list'){
-    console.log('Listing Notes');
-}else if (command=='read'){
+   notes.addNote(argv.title,argv.body);
+
+}
+else if (command=='list'){
+     notes.getAll();
+}
+else if (command=='read'){
     console.log('Reading Notes');
-}else if (command=='delete'){
+}
+else if (command=='delete'){
     console.log('Deleting Notes');
-}else{
+}
+else{
     console.log('Command not recognised')
 }
