@@ -15,6 +15,7 @@ var command=process.argv[2]
 
 if(command=='add'){
   var note= notes.addNote(argv.title,argv.body);
+  //if not null returned from the notes.addnote function 
   if(note){
      console.log('Note created');
      console.log(`Title: ${note.title}`);
