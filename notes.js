@@ -16,13 +16,19 @@ var addNote= (title,body) =>{
  var noteString=fs.readFileSync('notes-data.json');
  notes=JSON.parse(noteString)
  } catch(e){
-
  }
 
- //pushing individual note into array
+ // so that there is no duplicate title
+ var duplicateNotes=notes.filter((note)=>{
+     return note.title === title;
+ });
+
+ if (duplicateNotes.length === 0){
+  //pushing individual note into array
  notes.push(note);
  //writing the notes onto the file
  fs.writeFileSync('notes-data.json',JSON.stringify(notes));
+ }
 };
 
 var getAll=() =>{
