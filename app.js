@@ -6,7 +6,9 @@ const fs=require('fs');
 const os=require('os');
 // added this line so that our notes.js should also start
 const notes=require('./notes.js');
+//third party modules
 const _=require('lodash');
+const yargs=require('yargs')
 
 var command=process.argv[2]
 console.log(process.argv[3]);
