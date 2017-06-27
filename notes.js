@@ -38,6 +38,7 @@ var addNote= (title,body) =>{
   //pushing individual note into array
  notes.push(note);
  saveNotes(notes);
+ return note;
  }
 };
 
