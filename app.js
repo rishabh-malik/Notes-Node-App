@@ -14,4 +14,10 @@ if(command=='add'){
    console.log('Adding new note'); 
 }else if (command=='list'){
     console.log('Listing Notes');
+}else if (command=='read'){
+    console.log('Reading Notes');
+}else if (command=='delete'){
+    console.log('Deleting Notes');
+}else{
+    console.log('Command not recognised')
 }
