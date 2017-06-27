@@ -53,7 +53,14 @@ var getNote=(title) =>{
 }
 
 var removeNote=(title) =>{
-    console.log('Removing Note',title);
+    var notes=fetchNotes();
+    var filteredNotes=notes.filter((note)=>{
+     return note.title !== title;
+ });
+ //saving all notes excluding the note which is to be deleted
+ saveNotes(filteredNotes);
+ 
+ return notes.length !== filteredNotes.length;
 }
 
 //export used to export functions app.js 
