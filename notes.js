@@ -8,8 +8,18 @@ var getAll=() =>{
     console.log('Getting all notes');
 }
 
+var getNote=(title) =>{
+    console.log('Getting Note',title);
+}
+
+var removeNote=(title) =>{
+    console.log('Removing Note',title);
+}
+
 //export used to export functions app.js 
 module.exports={
   addNote,
-  getAll
+  getAll,
+  getNote,
+  removeNote
 };

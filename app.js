@@ -23,10 +23,10 @@ else if (command=='list'){
      notes.getAll();
 }
 else if (command=='read'){
-    console.log('Reading Notes');
+    notes.getNote(argv.title);
 }
-else if (command=='delete'){
-    console.log('Deleting Notes');
+else if (command=='remove'){
+    notes.removeNote(argv.title);
 }
 else{
     console.log('Command not recognised')
